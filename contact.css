@@ -1,0 +1,10 @@
+#josh-drawing {
+    height: 20vw;
+    min-height: 200px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border-radius: 10%;
+}

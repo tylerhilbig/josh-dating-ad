@@ -1,0 +1,82 @@
+:root {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin-left: .25vw;
+    margin-right: .25vw;
+    text-align: center;
+    color: #ffffff;
+    background-image: linear-gradient(135deg, #7c389c 0%, #f5bc2a 50%, #ab39ba 100%);
+
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+subtitle {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;              /* ⬅️ Removes the hidden bullet space */
+  margin: 0;               /* ⬅️ Prevents unexpected spacing issues */
+  display: flex;
+  justify-content: space-around;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+button {
+    background-color: rgba(207, 59, 227, 0.4);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #961a92;
+    color:#f7e1aa;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    max-width: 600px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-color: rgba(207, 59, 227, 0.25);
+    border-radius: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f3ca23;
+    transform: scale(1.25);
+}
