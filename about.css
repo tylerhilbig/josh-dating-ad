@@ -2,44 +2,88 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 12px;
 }
 
 #profile-pic {
     height: 15vw;
     min-height: 200px;
-    width:  auto;
+    width: auto;
+    max-width: 100%;
     border-radius: 20%;
     margin-bottom: 20px;
 }
 
-#stats {
+/* Shared card styling for the Stats, Reviews, and FAQ sections */
+#stats,
+#reviews,
+#FAQ {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-sizing: border-box;
+    width: min(92vw, 600px);
     background-color: rgba(207, 59, 227, 0.25);
     border-radius: 10px;
-    margin-top: 25px;
-    margin-left: 0;
-    margin-right: 0;
-    padding-top: 0px;
+    margin: 25px 0;
+    padding: 0 10px 10px;
 }
 
-#stats-list {
+#FAQ {
+    font-size: .8em;
+}
+
+#stats-list,
+#reviews-list,
+#faq-list {
     list-style-type: none;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0;
+}
+
+#reviews-list {
+    gap: 16px;
 }
 
 #stats-list li {
     display: grid;
     grid-template-columns: 120px 1fr;
-    /* display: flex; */
-    /* justify-content: space-between; */
     gap: 10px;
     margin: 5px 0;
     font-size: 1.2em;
     font-family: monospace;
+}
+
+#faq-list li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+/* Phones: tighten stats and stack FAQ questions above answers */
+@media (max-width: 600px) {
+    #stats-list li {
+        grid-template-columns: 95px 1fr;
+        gap: 6px;
+        font-size: 1em;
+    }
+
+    #faq-list li {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        margin: 12px 0;
+        font-size: 1.1em;
+    }
+
+    #faq-list li span:first-child {
+        font-weight: 600;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
 }
